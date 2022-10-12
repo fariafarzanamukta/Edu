@@ -10,7 +10,7 @@ const Topics = () => {
         // console.log(topics);
     }, [])
     return (
-        <div className='font-serif bg-orange-50 mt-16'>
+        <div className='font-serif bg-lime-50 mt-16 '>
 
             <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8'>
                 <div className='text-center'>
@@ -18,7 +18,7 @@ const Topics = () => {
                     <p className='text-gray-500'>For, practice Choice your favorite topic and attend all the question</p>
                 </div>
             </div>
-            <div className=' px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8'>
+            <div className=' px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8 pb-16'>
                 <div className='w-5/6  mx-auto grid grid-cols-1 md:grid-cols-2 gap-10'>
                     {
                         topics.map(topic => <Topic

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import icon from '../../../image/quiz.png'
+
+
+let activeStyle = {
+    textDecoration: "underline",
+    color: '#7c3aed'
+
+};
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +15,7 @@ const Navbar = () => {
         <div className='bg-gray-100'>
             <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  md:px-24 lg:px-8'>
                 <div className='relative flex items-center justify-between'>
-                    <Link
+                    <NavLink
                         to='/'
                         aria-label='proReader'
                         title='proReader'
@@ -17,40 +24,49 @@ const Navbar = () => {
                         <span className='h-6 w-6'>
                             <img src={icon} alt="" />
                         </span>
-                        <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
+                        <span className='ml-2 text-xl font-bold tracking-wide text-blue-600'>
                             Quiz-Analyzer
                         </span>
-                    </Link>
-                    <ul className='flex items-center hidden space-x-8 lg:flex'>
+                    </NavLink>
+                    <ul className='hidden items-center  space-x-8 lg:flex'>
                         <li>
-                            <Link
+                            <NavLink
                                 to='/home'
+                                style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }
                                 aria-label='Home'
                                 title='Home'
                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                             >
                                 Home
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link
-                                to='/books'
-                                aria-label='Books'
-                                title='Books'
-                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            <NavLink
+                                to='/statistics'
+                                style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }
+                                aria-label='Statistics'
+                                title='Statistics'
+                                className='font-medium tracking-wide'
                             >
-                                Books
-                            </Link>
+                                Statistics
+                            </NavLink>
                         </li>
                         <li>
-                            <Link
-                                to='/about'
-                                aria-label='About us'
-                                title='About us'
+                            <NavLink
+                                to='/blogs'
+                                style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }
+                                aria-label='Blogs'
+                                title='Blogs'
                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                             >
-                                About us
-                            </Link>
+                                Blogs
+                            </NavLink>
                         </li>
                     </ul>
                     <div className='lg:hidden'>
@@ -80,17 +96,20 @@ const Navbar = () => {
                                 <div className='p-5 bg-white border rounded shadow-sm'>
                                     <div className='flex items-center justify-between mb-4'>
                                         <div>
-                                            <Link
+                                            <NavLink
                                                 to='/'
+                                                style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }
                                                 className='inline-flex items-center'
                                             >
                                                 <span className='h-6 w-6'>
                                                     <img src={icon} alt="" />
                                                 </span>
-                                                <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                                                Quiz-Analyzer
+                                                <span className='ml-2 text-xl font-bold tracking-wide text-blue-600 uppercase'>
+                                                    Quiz-Analyzer
                                                 </span>
-                                            </Link>
+                                            </NavLink>
                                         </div>
                                         <div>
                                             <button
@@ -111,34 +130,41 @@ const Navbar = () => {
                                     <nav>
                                         <ul className='space-y-4'>
                                             <li>
-                                                <Link
+                                                <NavLink
                                                     to='/'
+                                                    style={({ isActive }) =>
+                                                        isActive ? activeStyle : undefined
+                                                    }
                                                     aria-label='Home'
                                                     title='Home'
                                                     className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                                 >
                                                     Home
-                                                </Link>
+                                                </NavLink>
                                             </li>
                                             <li>
-                                                <Link
-                                                    to='/books'
-                                                    aria-label='Books'
-                                                    title='Books'
+                                                <NavLink
+                                                    to='/statistics'
+                                                    style={({ isActive }) =>
+                                                        isActive ? activeStyle : undefined
+                                                    }
                                                     className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                                 >
-                                                    Books
-                                                </Link>
+                                                    Statistics
+                                                </NavLink>
                                             </li>
                                             <li>
-                                                <Link
-                                                    to='/about'
-                                                    aria-label='About Us'
-                                                    title='About Us'
+                                                <NavLink
+                                                    to='/blogs'
+                                                    style={({ isActive }) =>
+                                                        isActive ? activeStyle : undefined
+                                                    }
+                                                    aria-label='Blogs'
+                                                    title='Blogs'
                                                     className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                                 >
                                                     About Us
-                                                </Link>
+                                                </NavLink>
                                             </li>
                                         </ul>
                                     </nav>

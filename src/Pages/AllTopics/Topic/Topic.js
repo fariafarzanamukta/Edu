@@ -10,7 +10,7 @@ const Topic = ({ topic }) => {
                 <div className="card card-compact w-fit mx-auto bg-base-100 shadow-xl">
                     <figure><img className='bg-gray-600 w-[400px] h-[350px]' src={logo} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">{name}</h2>
+                        <h2 className="card-title text-blue-600">{name}</h2>
                         <div className="card-actions justify-center">
                             <NavLink to={`/quizDetails/${id}`}>
                                 <div className='flex justify-between items-center'>
