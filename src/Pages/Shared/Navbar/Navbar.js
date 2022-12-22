@@ -109,8 +109,9 @@ const Navbar = () => {
                                                 <span className='ml-2 text-xl font-bold tracking-wide text-blue-600 uppercase'>
                                                    BrainStrom
                                                 </span>
+                                                
                                             </NavLink>
-                                            
+
                                         </div>
                                         <div>
                                             <button
