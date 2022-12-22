@@ -25,7 +25,7 @@ const Navbar = () => {
                             <img src={icon} alt="" />
                         </span>
                         <span className='ml-2 text-xl font-bold tracking-wide text-blue-600'>
-                            Quiz-Analyzer
+                          BrainStrom
                         </span>
                     </NavLink>
                     <ul className='hidden items-center  space-x-8 lg:flex'>
@@ -107,7 +107,7 @@ const Navbar = () => {
                                                     <img src={icon} alt="" />
                                                 </span>
                                                 <span className='ml-2 text-xl font-bold tracking-wide text-blue-600 uppercase'>
-                                                    Quiz-Analyzer
+                                                   BrainStrom
                                                 </span>
                                             </NavLink>
                                         </div>
